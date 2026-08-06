@@ -21,7 +21,8 @@ jobs:
         uses: ./
         with:
           joke: ${{ github.event.comment.body }}
-          token: ${{ secrets.GITHUB_TOKEN }} # Removed no need for gemini API key
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       - name: Update comment
         uses: peter-evans/create-or-update-comment@v5
         with:
