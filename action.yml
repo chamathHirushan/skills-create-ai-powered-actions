@@ -1,12 +1,12 @@
 name: "Rate Joke Action"
-description: "Rates a joke using GitHub Models"
+description: "Rates a joke using the Gemini API"
 
 inputs:
   joke:
     description: "The joke to be rated"
     required: true
   token:
-    description: "Personal access token to be used for GitHub Models API call"
+    description: "Gemini API key to use for the request"
     default: ${{ github.token }}
 
 outputs:
