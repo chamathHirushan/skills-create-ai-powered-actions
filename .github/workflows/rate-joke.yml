@@ -8,7 +8,7 @@ on:
 permissions:
   issues: write
   contents: read
-  models: read
+  models: read # Removed no need for gemini API key
 
 jobs:
   joke:
@@ -21,7 +21,7 @@ jobs:
         uses: ./
         with:
           joke: ${{ github.event.comment.body }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }} # Removed no need for gemini API key
       - name: Update comment
         uses: peter-evans/create-or-update-comment@v5
         with:
