@@ -4,7 +4,7 @@
 - Added the **Google Gemini SDK** (`@google/genai`) to enable Gemini API interactions from the JavaScript action.
 - Updated the action authentication flow to use a **Gemini API key stored securely as a GitHub Secret** and passed through the workflow environment.
 - Removed the dependency on the GitHub Models `token` input and migrated to using the `GEMINI_API_KEY` environment variable.
-- Implemented **structured JSON responses** using Gemini's `responseMimeType` and `responseSchema` configuration to ensure consistent AI-generated joke ratings.
+- Implemented **structured JSON responses** using Gemini's `responseMimeType` and `responseSchema` configuration to ensure consistent AI-generated ratings.
 - Added **Zod schema validation** to validate and enforce the expected response structure from Gemini before returning results.
 - Updated the action logic to parse Gemini responses and expose the validated joke analysis through GitHub Action outputs.
 
